@@ -2,9 +2,9 @@
   <div>
     <div class = "container pt-5">
 	    <div class = "mx-auto mt-5">
-        <h1>Bem vindo! Faça login para continuar.</h1>
-        <b-row class = "mx-auto" style="width: 200px;" align-h = "center">
-          <b-button variant = "info" size = "sm" class = "btn btn-primary btn-sm" to = "/loginUsuario">
+        <h1 class="text-center">Bem vindo! Faça login para continuar.</h1>
+        <b-row class = "mx-auto" style="width: 150px;" align-h = "center">
+          <b-button variant = "info" size = "sm" class = "mr-2" to = "/loginUsuario">
             Área do Usuario!
           </b-button>
         </b-row> 
