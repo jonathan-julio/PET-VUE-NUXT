@@ -14,7 +14,7 @@
 </template>
 
 <script>
-//import bootstrap from '../node_modules/bootstrap/dist/css/bootstrap.css';
+import Header from '@/components/HeaderUsuario.vue';
 export default {
   name: 'IndexPage'
 }

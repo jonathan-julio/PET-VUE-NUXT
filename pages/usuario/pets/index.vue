@@ -1,5 +1,6 @@
 <template>
   <div>
+    <headerUsuario />
     <div class = "container pt-5">
 	    <div class = "mx-auto">
         <h1 class="text-center mb-5">Bem vindo! veja seus pets.</h1>
@@ -20,7 +21,10 @@
   </div>
 </template>
 <script>
+import Header from '@/components/HeaderUsuario.vue'
+import HeaderUsuario from '../../../components/HeaderUsuario.vue'
 export default {
+  components: { HeaderUsuario },
   name: 'Pets',
   data(){
     return{
