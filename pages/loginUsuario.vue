@@ -1,7 +1,5 @@
 <template>
-  <b-row class="mt-5 ">
-    <b-col sm="5" class="d-flex justify-content-center align-items-center ">
-      <div class="col-8">
+      <div class="container pt-5" style="width: 30%; min-width: 300px;">
         <h2 class="text-center mb-3 title-login">Faça o login</h2>
         <hr>
         <b-form @submit.prevent="onSubmit">
@@ -15,15 +13,9 @@
             <b-button class="mt-2" type="submit" variant="primary">
               Entrar
             </b-button>
- 
             <hr>
- 
-           
         </b-form>
       </div>
-    </b-col>
-    <b-col sm="9"></b-col>
-  </b-row>
 </template>
 
 <script>

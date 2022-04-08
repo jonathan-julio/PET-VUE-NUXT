@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class = "container pt-5">
-	    <b-button size="sm" class="mt-4 mb-2" :to="'/usuario/pets/'">
+	    <b-button variant="primary" size="sm" class="mt-4 mb-2" :to="'/usuario/pets/'">
             Voltar aos Pets
         </b-button>
         <hr>
@@ -11,24 +11,26 @@
                     <b-row class="mt-2">
                         <h1 class="pt-2">{{ pets[0].nome }}</h1>
                     </b-row>
-                </b-col>
-            </b-row>
-            <b-row>
-                <b-col>
                     <b-row class="mt-2">
-                        <span class="pt-2">Aniversario: {{ pets[0].aniversario }}</span>
+                        <span >Aniversario: {{ pets[0].aniversario }}</span>
                     </b-row>
-                </b-col>
-            </b-row>
-            <b-row>
-                <b-col>
                     <b-row class="mt-2">
-                        <span class="pt-2">Dono: {{ pets[0].dono }}</span>
+                        <span>Dono: {{ pets[0].dono }}</span>
+                    </b-row>
+                    <b-row class="mt-1 mx-auto">
+                        <b-button style="width: auto;" size="sm" class="ml-1"  to="consulta/1">
+                            Solicitar consulta
+                        </b-button>
+                        <b-button style="width: auto;" size="sm" variant="warning" class="- mx-1"  to="editar/1">
+                            Editar
+                        </b-button>
+                        <b-button  style="width: auto;" size="sm" variant="danger" @click="excluir" class="ml-1">
+                            Excluir
+                        </b-button>
                     </b-row>
                 </b-col>
             </b-row>
         </div>
-
     </div>
   </div>
 </template>
@@ -47,6 +49,11 @@ export default {
         {id: 4, nome: 'pandora 2', dono : 'henrique', aniversario: '16-02-2020'},
       ]
     }
+  },
+  methods:{
+      excluir(){
+          console.log("Elento excluido.");
+      }
   }
 }
 </script>

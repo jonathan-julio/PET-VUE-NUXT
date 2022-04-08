@@ -1,7 +1,8 @@
 <template >
       <div class="container pt-5" style="width: 30%; min-width: 300px;">
-        <h2 class="text-center">Cadastre seu novo pet</h2>
-        <hr>
+        <h1 class="text-center">Atualizar Informações </h1>
+        <p class="text-center mt-4 mb-0">Edite os dados do seu pet</p>
+        <hr class="mt-1">
         <b-form @submit.prevent="onSubmit">
             <b-form-group id="grupo1" label="Nome" label-for="input1" >
               <b-form-input id="input1" placeholder="Florzinha" v-model="form.Nome" required></b-form-input>
@@ -14,7 +15,7 @@
             </b-form-group>
  
             <b-button class="mt-2" type="submit" variant="primary">
-              Adicionar
+              Atualizar
             </b-button>
  
             <hr>
