@@ -3,7 +3,7 @@ export default {
   head: {
     title: 'PET-VUE-NUXT',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'pt-BR'
     },
     meta: [
       { charset: 'utf-8' },
