@@ -3,9 +3,12 @@
     <div class = "container pt-5">
 	    <div class = "mx-auto mt-5">
         <h1 class="text-center">Bem vindo! Faça login para continuar.</h1>
-        <b-row class = "mx-auto" style="width: 150px;" align-h = "center">
-          <b-button variant = "info" size = "sm" class = "mr-2" to = "/loginUsuario">
+        <b-row class = "mx-auto"  align-h = "center">
+          <b-button style="width: 150px;" variant = "info" size = "sm" class = "mx-2" to = "/loginUsuario">
             Área do Usuario!
+          </b-button>
+          <b-button style="width: 150px;" variant = "warning" size = "sm" to = "/loginVeterinario">
+            Área do veterinario!
           </b-button>
         </b-row> 
 	    </div>

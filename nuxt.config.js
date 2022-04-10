@@ -37,8 +37,12 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
+    'bootstrap-vue/nuxt',
   ],
-
+  axios: {
+    baseURL: "http://epet.imd.ufrn.br:8443/api/"
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }

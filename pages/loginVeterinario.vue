@@ -2,7 +2,7 @@
 <div>
   <headerLogin/>
       <div class="container pt-5" style="width: 30%; min-width: 300px;">
-        <h2 class="text-center mb-3 title-login">Faça o login como Usuario</h2>
+        <h2 class="text-center mb-3 title-login" style="font-size: 30px;">Faça o login como veterinario</h2>
         <hr>
         <b-form @submit.prevent="onSubmit">
             <b-form-group label="E-mail" label-for="email" >
@@ -15,7 +15,7 @@
             
             <hr>
         </b-form>
-        <a><nuxt-link to="/registrarUsuario"> Cadastre-se</nuxt-link></a>
+        <a><nuxt-link to="/registrarVeterinario"> Cadastre-se</nuxt-link></a>
       </div>
 </div>
 </template>
@@ -33,7 +33,7 @@ export default {
   methods: {
       onSubmit(){
           console.log(this.form);
-          this.$router.push("/usuario/pets");
+          this.$router.push("/veterinario/abertas");
       }
   }
 }

@@ -1,15 +1,16 @@
 <template>
   <div class="sidebar text-center">
     <h1>
-      <span>My Pet</span>
+
+      <span >My Pet</span>
     </h1>
-    <client-only>
-      <div id="itens">
-          <a><nuxt-link to="/usuario/pets">Pets </nuxt-link></a>
-          <a><nuxt-link to="/usuario/consultas">Consultas </nuxt-link></a>
-          <a><nuxt-link to="/">Sair </nuxt-link></a>
-      </div>
-    </client-only>
+    <div id="itens">
+        <a>Minhas consultas -> </a>
+        <a><nuxt-link to="/veterinario/abertas">Abertas </nuxt-link></a>
+        <a><nuxt-link to="/veterinario/aceitas">Aceitas </nuxt-link></a>
+        <a><nuxt-link to="/veterinario/recusadas">Recusadas </nuxt-link></a>
+        <a><nuxt-link to="/">Sair </nuxt-link></a>
+    </div>
   </div>
 </template>
 

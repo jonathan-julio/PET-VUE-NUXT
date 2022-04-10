@@ -3,13 +3,12 @@
     <h1>
       <span>My Pet</span>
     </h1>
-    <client-only>
-      <div id="itens">
-          <a><nuxt-link to="/usuario/pets">Pets </nuxt-link></a>
-          <a><nuxt-link to="/usuario/consultas">Consultas </nuxt-link></a>
-          <a><nuxt-link to="/">Sair </nuxt-link></a>
-      </div>
-    </client-only>
+    <div id="itens">
+        <a><nuxt-link to="/">inicio </nuxt-link></a>
+        <a><nuxt-link to="/loginUsuario">Login Usuario </nuxt-link></a>
+        <a><nuxt-link to="/loginVeterinario">login Veterinario </nuxt-link></a>
+    </div>
+  
   </div>
 </template>
 

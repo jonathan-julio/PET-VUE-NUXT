@@ -5,15 +5,11 @@
         <hr class="mt-1">
         <b-form @submit.prevent="onSubmit">
             <b-form-group id="grupo1" label="Nome" label-for="input1" >
-              <b-form-input id="input1" placeholder="Florzinha" v-model="form.Nome" required></b-form-input>
+              <b-form-input id="input1" placeholder="Florzinha" v-model="form.name" required></b-form-input>
             </b-form-group>
             <b-form-group id="grupo2" label="Aniversario" label-for="input2">
-              <b-form-input id="input2"  type="date" placeholder="Insira o aniversario do pet" v-model="form.aniversario" required></b-form-input>
+              <b-form-input id="input2"  type="date" placeholder="Insira o aniversario do pet" v-model="form.d_niver" required></b-form-input>
             </b-form-group>
-            <b-form-group id="grupo3" label="Dono" label-for="input3">
-              <b-form-input id="input3"  placeholder="Insira o dono do Pet" v-model="form.idDono" required ></b-form-input>
-            </b-form-group>
- 
             <b-button class="mt-2" type="submit" variant="primary">
               Atualizar
             </b-button>
@@ -29,17 +25,34 @@ export default {
   data(){
       return{
           form:{
-              Nome: '',
-              aniversario: '',
-              idDono: 0
+              name: '',
+              d_niver: '',
+              dono : {
+                idPessoa : 0
+              }
           }
       }
   },
-  methods: {
-      onSubmit(){
-          console.log(this.form);
-          this.$router.push("/usuario/pets");
-      }
+  mounted(){
+    this.consumirPet()
+  },
+  methods:{
+    consumirPet(){
+      this.$axios.get(`pet/buscar/${this.$route.params.id}`)
+      .then(res => {
+        this.form = res.data
+      })
+      
+    },
+    onSubmit(){
+      this.$axios.post("pet/cadastrar/" + this.form.dono.idPessoa, {
+        idPet : this.$route.params.id,
+        name :this.form.name,
+        d_niver: this.form.d_niver
+      }).then(res => {
+        this.$router.push('/usuario/pets');
+      });
+    }
   }
 }
 </script>
