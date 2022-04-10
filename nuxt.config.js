@@ -41,7 +41,7 @@ export default {
     'bootstrap-vue/nuxt',
   ],
   axios: {
-    baseURL: "http://epet.imd.ufrn.br:8443/api/"
+    baseURL: "http://epet.imd.ufrn.br:8443/api/" 
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
